@@ -1,0 +1,11 @@
+some text
+more text
+even more text
+
+dd - deletes the current line
+:w saves
+:wq saves and quits 
+:q quits
+:q! quits without saving
+yy coping a line 
+

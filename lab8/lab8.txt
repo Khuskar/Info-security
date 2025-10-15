@@ -1,0 +1,18 @@
+mac@MacBook-Pro-3 Info-security % mkdir lab8
+mac@MacBook-Pro-3 Info-security % cd lab8 
+mac@MacBook-Pro-3 lab8 % touch file.txt
+mac@MacBook-Pro-3 lab8 % vim file.txt
+mac@MacBook-Pro-3 lab8 % vim file.txt 
+mac@MacBook-Pro-3 lab8 % cat /Users/mac/Desktop/Info-security/lab8/file.txt
+some text
+more text
+even more text
+
+dd - deletes the current line
+:w saves
+:wq saves and quits 
+:q quits
+:q! quits without saving
+yy coping a line 
+
+mac@MacBook-Pro-3 lab8 % 
