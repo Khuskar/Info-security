@@ -1,0 +1,25 @@
+mac@MacBook-Pro-3 Info-security % mkdir lab7
+mac@MacBook-Pro-3 Info-security % cd lab7
+mac@MacBook-Pro-3 lab7 % nano send_email.py
+mac@MacBook-Pro-3 lab7 % chmod +x /Users/mac/Desktop/Info-security/lab7/send_email.py
+mac@MacBook-Pro-3 lab7 % python3 /Users/mac/Desktop/Info-security/lab7/send_email.py
+mac@MacBook-Pro-3 lab7 % cat /Users/mac/Desktop/Info-security/lab7/email_log.txt
+Email sent to server owner at 2025-10-15 21:43:22.734737
+mac@MacBook-Pro-3 lab7 % crontab -e
+crontab: no crontab for mac - using an empty one
+
+zsh: suspended  crontab -e
+mac@MacBook-Pro-3 lab7 % crontab -e
+crontab: no crontab for mac - using an empty one
+crontab: "/usr/bin/vi" exited with status 1
+mac@MacBook-Pro-3 lab7 % crontab -l
+crontab: no crontab for mac
+mac@MacBook-Pro-3 lab7 % crontab -e
+crontab: no crontab for mac - using an empty one
+crontab: installing new crontab
+mac@MacBook-Pro-3 lab7 % crontab -l
+* * * * * /usr/bin/python3 /Users/mac/Desktop/Info-security/lab7/send_email.py
+mac@MacBook-Pro-3 lab7 % cat /Users/mac/Desktop/Info-security/lab7/email_log.txt
+Email sent to server owner at 2025-10-15 21:43:22.734737
+mac@MacBook-Pro-3 lab7 % crontab -r
+mac@MacBook-Pro-3 lab7 % 
