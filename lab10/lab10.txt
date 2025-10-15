@@ -1,0 +1,39 @@
+mac@MacBook-Pro-3 lab10 % brew install nginx
+==> Fetching downloads for: nginx
+==> Downloading https://ghcr.io/v2/homebrew/core/nginx/manifests/1.29.2
+Already downloaded: /Users/mac/Library/Caches/Homebrew/downloads/3202d0852d4e7002b9b7357842a35a66907520b4953976df5b848f602f9526d8--nginx-1.29.2.bottle_manifest.json
+==> Fetching nginx
+==> Downloading https://ghcr.io/v2/homebrew/core/nginx/blobs/sha256:13ab2327cfe3
+Already downloaded: /Users/mac/Library/Caches/Homebrew/downloads/a0864b41268f692f06d555d85a83d2271195c182a710970892fb01ec34ec7d97--nginx--1.29.2.arm64_sequoia.bottle.tar.gz
+==> Pouring nginx--1.29.2.arm64_sequoia.bottle.tar.gz
+==> Caveats
+Docroot is: /opt/homebrew/var/www
+
+The default port has been set in /opt/homebrew/etc/nginx/nginx.conf to 8080 so that
+nginx can run without sudo.
+
+nginx will load all files in /opt/homebrew/etc/nginx/servers/.
+
+To start nginx now and restart at login:
+  brew services start nginx
+Or, if you don't want/need a background service you can just run:
+  /opt/homebrew/opt/nginx/bin/nginx -g daemon\ off\;
+==> Summary
+🍺  /opt/homebrew/Cellar/nginx/1.29.2: 27 files, 2.5MB
+==> Running `brew cleanup nginx`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+mac@MacBook-Pro-3 lab10 % sudo nginx
+Password:
+mac@MacBook-Pro-3 lab10 % /opt/homebrew/etc/nginx/
+zsh: permission denied: /opt/homebrew/etc/nginx/
+mac@MacBook-Pro-3 lab10 % /opt/homebrew/etc/nginx/nginx.conf
+zsh: permission denied: /opt/homebrew/etc/nginx/nginx.conf
+mac@MacBook-Pro-3 lab10 % sudo nano /opt/homebrew/etc/nginx/servers/my_site.conf 
+mac@MacBook-Pro-3 lab10 % sudo mkdir -p /opt/homebrew/var/www
+mac@MacBook-Pro-3 lab10 % sudo nano /opt/homebrew/var/www/my_site.html
+mac@MacBook-Pro-3 lab10 % sudo nginx -t
+nginx: the configuration file /opt/homebrew/etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /opt/homebrew/etc/nginx/nginx.conf test is successful
+mac@MacBook-Pro-3 lab10 % sudo nginx -s reload
+mac@MacBook-Pro-3 lab10 % 
