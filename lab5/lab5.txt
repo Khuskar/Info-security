@@ -1,0 +1,343 @@
+Last login: Wed Oct 15 13:23:44 on ttys001
+mac@MacBook-Pro-3 ~ % cd /Users/mac/Desktop/Info-security
+mac@MacBook-Pro-3 Info-security % mkdir lab5
+mac@MacBook-Pro-3 Info-security % cd lab5
+mac@MacBook-Pro-3 lab5 % touch lab5.txt 
+mac@MacBook-Pro-3 lab5 % dscl . list /Groups
+_accessoryupdater
+_amavisd
+_analyticsd
+_analyticsusers
+_aonsensed
+_appinstalld
+_appleevents
+_applepay
+_appowner
+_appserveradm
+_appserverusr
+_appstore
+_ard
+_assetcache
+_astris
+_atsserver
+_audiomxd
+_avphidbridge
+_backgroundassets
+_biome
+_calendar
+_captiveagent
+_ces
+_clamav
+_cmiodalassistants
+_coreaudiod
+_coremediaiod
+_coreml
+_ctkd
+_cvms
+_cvs
+_darwindaemon
+_datadetectors
+_demod
+_detachedsig
+_devdocs
+_developer
+_devicemgr
+_diskimagesiod
+_displaypolicyd
+_distnote
+_dovenull
+_dpaudio
+_driverkit
+_eligibilityd
+_eppc
+_findmydevice
+_fpsd
+_gamecontrollerd
+_geod
+_guest
+_hidd
+_iconservices
+_installassistant
+_installcoordinationd
+_installer
+_jabber
+_keytabusers
+_knowledgegraphd
+_launchservicesd
+_lda
+_locationd
+_logd
+_lp
+_lpadmin
+_lpoperator
+_mailman
+_mbsetupuser
+_mcxalr
+_mdnsresponder
+_mmaintenanced
+_mobileasset
+_mobilegestalthelper
+_modelmanagerd
+_mysql
+_naturallanguaged
+_nearbyd
+_netbios
+_netstatistics
+_networkd
+_neuralengine
+_notification_proxy
+_nsurlsessiond
+_oahd
+_odchpass
+_ondemand
+_postdrop
+_postfix
+_postgres
+_qtss
+_reportmemoryexception
+_reportsystemmemory
+_rmd
+_sandbox
+_screensaver
+_scsd
+_securityagent
+_sntpd
+_softwareupdate
+_spotlight
+_sshd
+_svn
+_swtransparencyd
+_systemstatusd
+_taskgated
+_teamsserver
+_terminusd
+_timed
+_timezone
+_tokend
+_trustd
+_trustevaluationagent
+_unknown
+_update_sharing
+_usbmuxd
+_uucp
+_warmd
+_webauthserver
+_webdeveloper
+_windowserver
+_www
+_wwwproxy
+_xserverdocs
+accessibility
+admin
+authedusers
+bin
+certusers
+com.apple.access_disabled
+com.apple.access_ftp
+com.apple.access_remote_ae
+com.apple.access_screensharing
+com.apple.access_sessionkey
+com.apple.access_ssh
+com.apple.sharepoint.group.1
+consoleusers
+daemon
+dialer
+everyone
+group
+interactusers
+kmem
+localaccounts
+mail
+netaccounts
+netusers
+network
+nobody
+nogroup
+operator
+owner
+procmod
+procview
+staff
+sys
+tty
+utmp
+wheel
+mac@MacBook-Pro-3 lab5 % sudo adduser user1
+Password:
+Sorry, try again.
+Password:
+Sorry, try again.
+Password:
+sudo: 3 incorrect password attempts
+mac@MacBook-Pro-3 lab5 % sudo adduser user1
+Password:
+sudo: adduser: command not found
+mac@MacBook-Pro-3 lab5 % sudo sysadminctl -addUser user1 -passwmac@MacBook-Pro-3 lab5 % sudo sysadminctl -addUser user1 -password 12345
+2025-10-15 17:57:12.088 sysadminctl[44032:14038030] ----------------------------
+2025-10-15 17:57:12.089 sysadminctl[44032:14038030] No clear text password or interactive option was specified (adduser, change/reset password will not allow user to use FDE) !
+2025-10-15 17:57:12.089 sysadminctl[44032:14038030] ----------------------------
+2025-10-15 17:57:12.234 sysadminctl[44032:14038030] Creating user record…
+2025-10-15 17:57:12.938 sysadminctl[44032:14038030] Assigning UID: 502 GID: 20
+2025-10-15 17:57:33.234 sysadminctl[44032:14038030] Creating home directory at /Users/user1
+mac@MacBook-Pro-3 lab5 % dscl . list /Users
+_accessoryupdater
+_amavisd
+_analyticsd
+_aonsensed
+_appinstalld
+_appleevents
+_applepay
+_appowner
+_appserver
+_appstore
+_ard
+_assetcache
+_astris
+_atsserver
+_audiomxd
+_avbdeviced
+_avphidbridge
+_backgroundassets
+_biome
+_calendar
+_captiveagent
+_ces
+_clamav
+_cmiodalassistants
+_coreaudiod
+_coremediaiod
+_coreml
+_ctkd
+_cvmsroot
+_cvs
+_cyrus
+_darwindaemon
+_datadetectors
+_demod
+_devdocs
+_devicemgr
+_diskimagesiod
+_displaypolicyd
+_distnote
+_dovecot
+_dovenull
+_dpaudio
+_driverkit
+_eligibilityd
+_eppc
+_findmydevice
+_fpsd
+_ftp
+_gamecontrollerd
+_geod
+_hidd
+_iconservices
+_installassistant
+_installcoordinationd
+_installer
+_jabber
+_kadmin_admin
+_kadmin_changepw
+_knowledgegraphd
+_krb_anonymous
+_krb_changepw
+_krb_kadmin
+_krb_kerberos
+_krb_krbtgt
+_krbfast
+_krbtgt
+_launchservicesd
+_lda
+_locationd
+_logd
+_lp
+_mailman
+_mbsetupuser
+_mcxalr
+_mdnsresponder
+_mmaintenanced
+_mobileasset
+_mobilegestalthelper
+_modelmanagerd
+_mysql
+_naturallanguaged
+_nearbyd
+_netbios
+_netstatistics
+_networkd
+_neuralengine
+_notification_proxy
+_nsurlsessiond
+_oahd
+_ondemand
+_postfix
+_postgres
+_qtss
+_reportmemoryexception
+_reportsystemmemory
+_rmd
+_sandbox
+_screensaver
+_scsd
+_securityagent
+_sntpd
+_softwareupdate
+_spotlight
+_sshd
+_svn
+_swtransparencyd
+_systemstatusd
+_taskgated
+_teamsserver
+_terminusd
+_timed
+_timezone
+_tokend
+_trustd
+_trustevaluationagent
+_unknown
+_update_sharing
+_usbmuxd
+_uucp
+_warmd
+_webauthserver
+_windowserver
+_www
+_wwwproxy
+_xserverdocs
+daemon
+mac
+nobody
+root
+user1
+mac@MacBook-Pro-3 lab5 % ls /Users
+Shared	mac	user1
+mac@MacBook-Pro-3 lab5 % sudo -u user1 whoami
+user1
+mac@MacBook-Pro-3 lab5 % sudo dscl . create /Users/user1 RealName "User One"
+mac@MacBook-Pro-3 lab5 % dscl . read /Users/user1 RealName
+RealName:
+ User One
+mac@MacBook-Pro-3 lab5 % sudo dscl . create /Groups/group1
+mac@MacBook-Pro-3 lab5 % sudo dscl . create /Groups/group1 PrimaryGroupID 600
+mac@MacBook-Pro-3 lab5 % dscl . read /Groups/group1
+dsAttrTypeNative:record_daemon_version: 9040000
+AppleMetaNodeLocation: /Local/Default
+GeneratedUID: 0DABE44A-B099-4EB3-948E-7E5352930715
+PrimaryGroupID: 600
+RecordName: group1
+RecordType: dsRecTypeStandard:Groups
+mac@MacBook-Pro-3 lab5 % sudo dscl . append /Groups/group1 GroupMembership user1
+mac@MacBook-Pro-3 lab5 % dscl . read /Groups/group1 GroupMembership
+GroupMembership: user1
+mac@MacBook-Pro-3 lab5 % sudo sysadminctl -deleteUser user1
+2025-10-15 18:01:07.384 sysadminctl[44141:14041731] ----------------------------
+2025-10-15 18:01:07.385 sysadminctl[44141:14041731] No clear text password or interactive option was specified (adduser, change/reset password will not allow user to use FDE) !
+2025-10-15 18:01:07.385 sysadminctl[44141:14041731] ----------------------------
+2025-10-15 18:01:07.472 sysadminctl[44141:14041731] Killing all processes for UID 502
+2025-10-15 18:01:07.473 sysadminctl[44141:14041731] Removing user1's home at /Users/user1
+2025-10-15 18:01:07.514 sysadminctl[44141:14041731] Deleting Public share point for user1
+2025-10-15 18:01:07.540 sysadminctl[44141:14041731] Deleting record for user1
+2025-10-15 18:01:07.547 sysadminctl[44141:14041731] AOSKit INFO: Disabling BTMM for user, no zone found for uid=502, usersToZones: (null)
+mac@MacBook-Pro-3 lab5 % dscl . list /Users | grep user1
+mac@MacBook-Pro-3 lab5 % 
