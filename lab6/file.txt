@@ -1,0 +1,27 @@
+mac@MacBook-Pro-3 lab6 % touch file.txt
+mac@MacBook-Pro-3 lab6 % ls -l
+total 0
+-rw-r--r--@ 1 mac  staff  0 Oct 15 18:21 file.txt
+mac@MacBook-Pro-3 lab6 % chmod 754 file.txt
+mac@MacBook-Pro-3 lab6 % ls -l
+total 0
+-rwxr-xr--@ 1 mac  staff  0 Oct 15 18:21 file.txt
+mac@MacBook-Pro-3 lab6 % sudo chown root file.txt
+mac@MacBook-Pro-3 lab6 % ls -l
+total 0
+-rwxr-xr--@ 1 root  staff  0 Oct 15 18:21 file.txt
+mac@MacBook-Pro-3 lab6 % sudo chown root:wheel file.txt
+mac@MacBook-Pro-3 lab6 % ls -l
+total 0
+-rwxr-xr--@ 1 root  wheel  0 Oct 15 18:21 file.txt
+mac@MacBook-Pro-3 lab6 % echo "test" >> file.txt
+zsh: permission denied: file.txt
+mac@MacBook-Pro-3 lab6 % cat file.txt
+mac@MacBook-Pro-3 lab6 % sudo chown mac:staff file.txt
+mac@MacBook-Pro-3 lab6 % ls -l
+total 0
+-rwxr-xr--@ 1 mac  staff  0 Oct 15 18:21 file.txt
+mac@MacBook-Pro-3 lab6 % echo "new line" >> file.txt
+mac@MacBook-Pro-3 lab6 % cat file.txt
+new line
+mac@MacBook-Pro-3 lab6 % 
