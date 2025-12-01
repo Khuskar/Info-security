@@ -1,0 +1,6 @@
+psutil
+pefile
+rich
+watchdog
+pefile
+pytest
