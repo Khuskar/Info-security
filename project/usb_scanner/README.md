@@ -155,3 +155,7 @@ This USB Security Scanner is a fully working, safe, and tool that demonstrates:
 -	Database logging
 
 ---
+
+# Video Presentation 
+
+### https://www.youtube.com/watch?v=68CTwEHeicI
